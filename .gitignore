@@ -1,0 +1,17 @@
+# Data files - not tracked, download from UCI (see README)
+*.csv
+*.npy
+
+# Trained models / large binaries
+*.pkl
+*.joblib
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store

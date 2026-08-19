@@ -3,18 +3,18 @@
 Data cleaning, exploratory analysis, and machine learning pipeline built to predict
 whether a diabetic patient will be readmitted to hospital within 30 days.
 
-Originally developed as my BSc thesis project. A supervisor and I later extended this work further for publication —
+Originally developed as my BSc thesis project. A supervisor and I later extended this work further for publication -
 see [Related Publication](#related-publication) below. This repository contains my
 original thesis version of the code.
 
 ## Dataset
 
 [Diabetes 130-US hospitals for years 1999–2008](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008)
-— a public dataset from the UCI Machine Learning Repository containing ~100,000 hospital
+- a public dataset from the UCI Machine Learning Repository containing ~100,000 hospital
 encounters for diabetic patients across 130 US hospitals.
 
 The raw dataset is not included in this repository (see [Reproducing](#reproducing) below)
-— download it directly from UCI using the link above.
+- download it directly from UCI using the link above.
 
 ## What this project covers
 
@@ -25,7 +25,7 @@ The raw dataset is not included in this repository (see [Reproducing](#reproduci
   e.g. using `admission_type_id` to fill missing `admission_source_id`)
 - Categorical grouping and re-encoding (admission type, discharge disposition, admission
   source, diagnosis codes)
-- Outlier and skewness analysis, `PowerTransformer` + `StandardScaler` for numeric features
+- Outlier and skewness analysis, PowerTransformer + StandardScaler for numeric features
 - Class imbalance handling with **SMOTE**
 - Feature engineering (e.g. `total_visits`, `num_changes` in medication)
 - Multicollinearity check via correlation matrix + VIF
@@ -40,7 +40,7 @@ The raw dataset is not included in this repository (see [Reproducing](#reproduci
 - Feature importance analysis across models
 - Best model selected and serialized (`pickle` / `joblib`)
 
-**Final test-set result (best model — tuned SGD Classifier, threshold 0.7):**
+**Final test-set result (best model - tuned SGD Classifier, threshold 0.7):**
 
 | Metric    | Train | Validation | Test  |
 | --------- | ----- | ---------- | ----- |
@@ -48,10 +48,6 @@ The raw dataset is not included in this repository (see [Reproducing](#reproduci
 | Recall    | 0.056 | 0.693      | 0.678 |
 | Precision | 0.784 | 0.138      | 0.142 |
 | F1        | 0.105 | 0.230      | 0.235 |
-
-_(Recall/precision trade-off reflects the threshold chosen to prioritize catching
-at-risk readmissions over overall accuracy — relevant in a clinical screening context
-where missing a true readmission is costlier than a false alarm.)_
 
 ## Repository structure
 
@@ -69,7 +65,7 @@ where missing a true readmission is costlier than a false alarm.)_
 2. Install dependencies: `pip install -r requirements.txt`
 3. Open `notebooks/Data_preprocessing_and_model_evaluation_code.ipynb` and update the
    file paths in the loading cells to point to your local copies of the CSVs (the
-   notebook was originally run in Google Colab — see the note at the top of the notebook).
+   notebook was originally run in Google Colab - see the note at the top of the notebook).
 
 ## Tech stack
 
